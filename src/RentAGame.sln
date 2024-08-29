@@ -17,11 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{47
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{F97DD804-C99A-439D-B149-396A8585D52E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAGame.Ordering", "Module\Ordering\RentAGame.Ordering\RentAGame.Ordering.csproj", "{B328D924-ECC5-4BDA-9108-8436C5E308A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentAGame.Ordering", "Module\Ordering\RentAGame.Ordering\RentAGame.Ordering.csproj", "{B328D924-ECC5-4BDA-9108-8436C5E308A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAGame.Chart", "Module\Chart\RentAGame.Chart\RentAGame.Chart.csproj", "{6844D766-F8F8-44B0-B6FA-2484C4D1AEF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentAGame.Chart", "Module\Chart\RentAGame.Chart\RentAGame.Chart.csproj", "{6844D766-F8F8-44B0-B6FA-2484C4D1AEF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAGame.Catalog", "Module\Catalog\RentAGame.Catalog\RentAGame.Catalog.csproj", "{99225086-4476-4C08-BCCD-5695CE4246A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentAGame.Catalog", "Module\Catalog\RentAGame.Catalog\RentAGame.Catalog.csproj", "{99225086-4476-4C08-BCCD-5695CE4246A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAGame.Shared", "Shared\RentAGame.Shared\RentAGame.Shared.csproj", "{1B2594D1-EED7-44E0-82CF-FD20B0059D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{99225086-4476-4C08-BCCD-5695CE4246A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99225086-4476-4C08-BCCD-5695CE4246A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99225086-4476-4C08-BCCD-5695CE4246A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2594D1-EED7-44E0-82CF-FD20B0059D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2594D1-EED7-44E0-82CF-FD20B0059D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2594D1-EED7-44E0-82CF-FD20B0059D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2594D1-EED7-44E0-82CF-FD20B0059D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{B328D924-ECC5-4BDA-9108-8436C5E308A9} = {4734990D-FF78-42CC-9138-1FBA81371969}
 		{6844D766-F8F8-44B0-B6FA-2484C4D1AEF4} = {323C05FE-D8A5-4781-8AD6-9BC6771AC850}
 		{99225086-4476-4C08-BCCD-5695CE4246A2} = {F812EB4F-CE6D-455F-90D8-A0E0188FCC56}
+		{1B2594D1-EED7-44E0-82CF-FD20B0059D1F} = {E47D2208-2937-4A9D-A413-791A8270A66A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E6D235A-49FF-46F5-9908-C8E9B21E03D9}
