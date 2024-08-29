@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Module\Catalog\RentAGame.Catalog\RentAGame.Catalog.csproj" />
+    <ProjectReference Include="..\..\Module\Chart\RentAGame.Chart\RentAGame.Chart.csproj" />
+    <ProjectReference Include="..\..\Module\Ordering\RentAGame.Ordering\RentAGame.Ordering.csproj" />
+  </ItemGroup>
+
 </Project>
