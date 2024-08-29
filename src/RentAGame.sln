@@ -3,17 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{CEE62114-D536-4DDB-ADA0-86F3E8C86A84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayApi", "Gateway\GatewayApi\GatewayApi.csproj", "{916C91C8-7478-491A-98A0-8B9B3189610C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayApi", "Gateway\GatewayApi\GatewayApi.csproj", "{916C91C8-7478-491A-98A0-8B9B3189610C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module", "Module", "{A073AE9F-70A4-45AA-930A-3EC05A40A86D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E47D2208-2937-4A9D-A413-791A8270A66A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F812EB4F-CE6D-455F-90D8-A0E0188FCC56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chart", "Chart", "{323C05FE-D8A5-4781-8AD6-9BC6771AC850}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rent", "Rent", "{4734990D-FF78-42CC-9138-1FBA81371969}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{F97DD804-C99A-439D-B149-396A8585D52E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{916C91C8-7478-491A-98A0-8B9B3189610C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -21,7 +28,16 @@ Global
 		{916C91C8-7478-491A-98A0-8B9B3189610C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916C91C8-7478-491A-98A0-8B9B3189610C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{916C91C8-7478-491A-98A0-8B9B3189610C} = {CEE62114-D536-4DDB-ADA0-86F3E8C86A84}
+		{916C91C8-7478-491A-98A0-8B9B3189610C} = {F97DD804-C99A-439D-B149-396A8585D52E}
+		{F812EB4F-CE6D-455F-90D8-A0E0188FCC56} = {A073AE9F-70A4-45AA-930A-3EC05A40A86D}
+		{323C05FE-D8A5-4781-8AD6-9BC6771AC850} = {A073AE9F-70A4-45AA-930A-3EC05A40A86D}
+		{4734990D-FF78-42CC-9138-1FBA81371969} = {A073AE9F-70A4-45AA-930A-3EC05A40A86D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E6D235A-49FF-46F5-9908-C8E9B21E03D9}
 	EndGlobalSection
 EndGlobal
