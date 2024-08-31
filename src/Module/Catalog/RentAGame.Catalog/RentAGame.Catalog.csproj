@@ -10,4 +10,9 @@
     <ProjectReference Include="..\..\..\Shared\RentAGame.Shared\RentAGame.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Games\Models" />
+    <Folder Include="Games\Events" />
+  </ItemGroup>
+
 </Project>

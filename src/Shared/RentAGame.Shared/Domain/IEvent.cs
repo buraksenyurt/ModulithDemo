@@ -5,7 +5,7 @@ namespace RentAGame.Shared.Domain;
 public interface IEvent
     : INotification
 {
-    public Guid TraceId { get; set; }
-    public DateTime Time { get; set; }
+    Guid TraceId => Guid.NewGuid();
+    public DateTime Time => DateTime.UtcNow;
     public string? Type => GetType().AssemblyQualifiedName;
 }
