@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Games\Models" />
     <Folder Include="Games\Events" />
+    <Folder Include="Data\Config" />
   </ItemGroup>
 
 </Project>
