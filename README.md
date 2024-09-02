@@ -27,8 +27,23 @@ Değerli Mehmet Özkaya'nın [Modüler Monolitik](https://www.udemy.com/share/10
 
 Pg-admin ayarları ise şöyle.
 
-- Hostname : postgres
-- Port     : 5432
-- Username : johndoe
-- Password : somew0rds
-- Database : RentAGameDb
+- **Hostname :** postgres
+- **Port     :** 5432
+- **Username :** johndoe
+- **Password :** somew0rds
+- **Database :** RentAGameDb
+
+## Entity Framework Migration
+
+EF migration işlemleri için aşağıdaki komutlar kullanılabilir. Tabii bu işlemleri yapmadan önce Postgresql bağlantı bilgisini içeren Api projesinin çalışır olduğundan emin olmalıyız. Komutumuzu RentAGame.Catalog klasöründe çalıştırabiliriz.
+
+```shell
+# Eğer yoksa gerekli ef aracı yüklenir
+dotnet tool install --global dotnet-ef
+
+# Örneğin InitialCreate isimli migration paketinin oluşturulması
+dotnet ef migrations add InitialCreate --startup-project ../../../Gateway/RentAGame.Api
+
+# Bu son pakete göre gerekli db operasyonlarının işletilmesi
+dotnet ef database update --startup-project ../../../Gateway/RentAGame.Api
+```
