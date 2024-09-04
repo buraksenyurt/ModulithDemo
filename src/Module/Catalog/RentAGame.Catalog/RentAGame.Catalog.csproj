@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Games\Models" />
     <Folder Include="Games\Events" />
+    <Folder Include="Game\Features\CreateGame" />
     <Folder Include="Data\Config" />
     <Folder Include="Data\Interceptors" />
   </ItemGroup>
