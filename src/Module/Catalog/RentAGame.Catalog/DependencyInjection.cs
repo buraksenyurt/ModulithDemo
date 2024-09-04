@@ -19,7 +19,13 @@ public static class DependencyInjection
     public static IServiceCollection AddCatalogModule(this IServiceCollection services, IConfiguration configuration)
     {
         var connStr = configuration.GetConnectionString("DbConStr");
-        services.AddDbContext<CatalogDbContext>(options => options.UseNpgsql(connStr));
+        services.AddDbContext<CatalogDbContext>(options =>
+        {
+            // Postgresql kullanacak bileşen bildirimi
+            options.UseNpgsql(connStr);
+            // Entity ekleme ve güncelleme işlerinde araya girecek Interceptor bileşeni bildirimi
+            options.AddInterceptors(new EntityUpsertInterceptor());
+        });
         services.AddScoped<IDataSeed, CatalogDataSeeder>();
         return services;
     }
