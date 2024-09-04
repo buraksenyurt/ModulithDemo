@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace RentAGame.Catalog.Data;
+namespace RentAGame.Catalog.Data.Interceptors;
 
 /*
     Bir Entity veritabanına kaydedilmeden önce araya girip bazı şeyler yapılabilir.

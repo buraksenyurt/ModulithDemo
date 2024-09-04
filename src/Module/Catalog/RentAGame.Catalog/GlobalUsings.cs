@@ -10,4 +10,5 @@ global using System.Reflection;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using RentAGame.Catalog.Data;
+global using RentAGame.Catalog.Data.Interceptors;
 global using RentAGame.Shared.Data;
