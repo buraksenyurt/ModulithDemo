@@ -8,5 +8,9 @@ public enum Genre
     Strategy,
     Adventure,
     Casual,
-    Puzzle
+    Puzzle,
+    Sport,
+    Fps,
+    Platformer,
+    Fighting
 }
