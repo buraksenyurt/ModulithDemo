@@ -14,6 +14,12 @@
     <Folder Include="Games\Models" />
     <Folder Include="Games\Events" />
     <Folder Include="Game\Features\CreateGame" />
+    <Folder Include="Game\Features\DeleteGame" />
+    <Folder Include="Game\Features\GetGames" />
+    <Folder Include="Game\Features\GetGamesByGenres" />
+    <Folder Include="Game\Features\GetGamesByPriceRange" />
+    <Folder Include="Game\Features\GetGameById" />
+    <Folder Include="Games\Dtos" />
     <Folder Include="Data\Config" />
     <Folder Include="Data\Interceptors" />
   </ItemGroup>
