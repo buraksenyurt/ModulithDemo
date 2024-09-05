@@ -47,3 +47,17 @@ dotnet ef migrations add InitialCreate --startup-project ../../../Gateway/RentAG
 # Bu son pakete göre gerekli db operasyonlarının işletilmesi
 dotnet ef database update --startup-project ../../../Gateway/RentAGame.Api
 ```
+
+## Web Api Endpoint
+
+Rest Api tarafında kullanılacak endpoint adresleri aşağıdaki gibidir.
+
+| HTTP Metot | URI | Açıklama |
+|-----------|-----------------|------------------|
+| GET | /games | Tüm oyunlar listesi |
+| GET | /games/{id} | Belli bir Id değerine sahip oyun bilgisi |
+| POST | /games/genre | Belli türlere ait oyunların listesi (genre listesi request body ile yollanır) |
+| GET | /games/price | Belli bir fiyat aralığındaki oyunları çekmek için (Fiyat listesi request body ile yollanır) |
+| POST | /games | Yeni bir oyun eklemek için |
+| PUT | /games/{id} | Oyun bilgilerini güncellemek için |
+| DELETE | /games/{id} | Belli bir oyunu silmek için |
