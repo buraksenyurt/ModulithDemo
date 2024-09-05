@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Games\Models" />
     <Folder Include="Games\Events" />
+    <Folder Include="Games\EventHandlers" />
     <Folder Include="Game\Features\CreateGame" />
     <Folder Include="Game\Features\DeleteGame" />
     <Folder Include="Game\Features\GetGames" />

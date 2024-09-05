@@ -15,3 +15,5 @@ global using RentAGame.Shared.Data;
 global using RentAGame.Catalog.Games.Dtos;
 global using RentAGame.Shared.Mediator;
 global using Mapster;
+global using MediatR;
+global using Microsoft.Extensions.Logging;

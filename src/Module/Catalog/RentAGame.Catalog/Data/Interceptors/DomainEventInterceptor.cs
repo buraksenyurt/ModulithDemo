@@ -1,4 +1,3 @@
-using MediatR;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace RentAGame.Catalog.Data.Interceptors;
