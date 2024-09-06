@@ -24,7 +24,7 @@ public class CreateGameHandler(CatalogDbContext catalogDbContext)
     {
         // Command nesnesinden gelen GameDto örneğini kullanarak bir Game nesnesi örneklenir
         var newGame = Game.Create(
-            Guid.NewGuid(),
+            command.Game.Id,
             command.Game.Title,
             command.Game.Description,
             command.Game.Programmers,
