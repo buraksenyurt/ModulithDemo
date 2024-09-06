@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "0d71b5ed-d5ee-460c-a7db-b819ec6158d5",
+		"name": "Rent A Game [Modulith Adventure]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1401662"
+	},
+	"item": [
+		{
+			"name": "Catalog Module",
+			"item": [
+				{
+					"name": "Create a new Game",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game\": {\n        \"id\": \"12d47956-a6a5-4ece-8ce8-348f8b9cbbe7\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rentagame_url}}/games",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Game",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game\": {\n        \"id\": \"12d47956-a6a5-4ece-8ce8-348f8b9cbbe7\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün en meşhur ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 32.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rentagame_url}}/games",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Game By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rentagame_url}}/games/2ef0c7fe-1536-47a2-a37c-6dd94b9ef625",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games",
+								"2ef0c7fe-1536-47a2-a37c-6dd94b9ef625"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Game",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{rentagame_url}}/games/12d47956-a6a5-4ece-8ce8-348f8b9cbbe7",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games",
+								"12d47956-a6a5-4ece-8ce8-348f8b9cbbe7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Games",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rentagame_url}}/games",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Games By Genres",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"genres\": [\n        8,\n        3\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rentagame_url}}/games/genre",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Games By List Price Range",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"minValue\": 29.0,\n    \"maxValue\": 50.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rentagame_url}}/games/price",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games",
+								"price"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chart Module",
+			"item": []
+		},
+		{
+			"name": "Ordering Module",
+			"item": []
+		}
+	]
+}

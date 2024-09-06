@@ -61,3 +61,5 @@ Rest Api tarafında kullanılacak endpoint adresleri aşağıdaki gibidir.
 | POST | /games | Yeni bir oyun eklemek için |
 | PUT | /games/{id} | Oyun bilgilerini güncellemek için |
 | DELETE | /games/{id} | Belli bir oyunu silmek için |
+
+Örnek isteklere ait Postman Collection için [bu dosyayı](./Rent%20A%20Game%20Modulith%20Adventure.postman_collection.json) kullanabilirsiniz.
