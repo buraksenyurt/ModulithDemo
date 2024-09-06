@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"game\": {\n        \"id\": \"12d47956-a6a5-4ece-8ce8-348f8b9cbbe7\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"raw": "{\n    \"game\": {\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -85,13 +85,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{rentagame_url}}/games/12d47956-a6a5-4ece-8ce8-348f8b9cbbe7",
+							"raw": "{{rentagame_url}}/games/3fa73010-11db-4e71-b1ba-f748f2df354d",
 							"host": [
 								"{{rentagame_url}}"
 							],
 							"path": [
 								"games",
-								"12d47956-a6a5-4ece-8ce8-348f8b9cbbe7"
+								"3fa73010-11db-4e71-b1ba-f748f2df354d"
 							]
 						}
 					},
