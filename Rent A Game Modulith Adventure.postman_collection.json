@@ -36,13 +36,65 @@
 					"response": []
 				},
 				{
+					"name": "Create a new Game - Title Required",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game\": {\n        \"title\": \"\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rentagame_url}}/games",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new Game - Least one genre required",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game\": {\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": []\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rentagame_url}}/games",
+							"host": [
+								"{{rentagame_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Update a Game",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"game\": {\n        \"id\": \"12d47956-a6a5-4ece-8ce8-348f8b9cbbe7\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün en meşhur ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 32.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"raw": "{\n    \"game\": {\n        \"id\": \"07ac7784-44ba-4198-8787-9467a2e4d035\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün en meşhur ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 33.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -85,13 +137,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{rentagame_url}}/games/3fa73010-11db-4e71-b1ba-f748f2df354d",
+							"raw": "{{rentagame_url}}/games/147ad815-d26f-44c3-82b7-8a6d54e29746",
 							"host": [
 								"{{rentagame_url}}"
 							],
 							"path": [
 								"games",
-								"3fa73010-11db-4e71-b1ba-f748f2df354d"
+								"147ad815-d26f-44c3-82b7-8a6d54e29746"
 							]
 						}
 					},

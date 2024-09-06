@@ -35,6 +35,9 @@ public static class DependencyInjection
             configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
         });
 
+        // Assembly üzerindeki Fluent Validator'lar DI servislerine kayıt edilir
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
         var connStr = configuration.GetConnectionString("DbConStr");
 
         services.AddScoped<ISaveChangesInterceptor, EntityUpsertInterceptor>();

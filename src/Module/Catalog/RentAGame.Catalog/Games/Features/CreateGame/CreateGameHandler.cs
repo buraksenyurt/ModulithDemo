@@ -17,11 +17,62 @@ public record CreateGameCommand(GameDto Game) : ICommand<CreateGameResult>;
 
 public record CreateGameResult(Guid Id);
 
-public class CreateGameHandler(CatalogDbContext catalogDbContext)
+// Validasyon işlemleri için AbstractValidator türevli bir bileşen kullanılıyor.
+public class CreateGameCommandValidator
+    : AbstractValidator<CreateGameCommand>
+{
+    public CreateGameCommandValidator()
+    {
+        RuleFor(c => c.Game.Title)
+            .NotEmpty()
+            .WithMessage("Game title is required")
+            .MaximumLength(50)
+            .WithMessage("Max title length is 50 char");
+
+        RuleFor(c => c.Game.Description)
+            .NotEmpty()
+            .WithMessage("Game description is required")
+            .MaximumLength(300)
+            .MinimumLength(20)
+            .WithMessage("Description length must be between 50 and 300 chars");
+
+        RuleFor(c => c.Game.ListPrice)
+            .GreaterThan(0)
+            .WithMessage("List price must be greater than 0 coin");
+
+        RuleFor(c => c.Game.Programmers)
+            .NotEmpty()
+            .WithMessage("Must include at least one programmer");
+
+        RuleFor(c => c.Game.Genres)
+            .NotEmpty()
+            .WithMessage("Must include at least one genre");
+
+        RuleFor(c => c.Game.ThumbnailImage)
+            .NotEmpty()
+            .WithMessage("Thumbnail image is required");
+    }
+}
+
+public class CreateGameHandler(CatalogDbContext catalogDbContext, IValidator<CreateGameCommand> validator, ILogger<CreateGameHandler> logger)
     : ICommandHandler<CreateGameCommand, CreateGameResult>
 {
     public async Task<CreateGameResult> Handle(CreateGameCommand command, CancellationToken cancellationToken)
     {
+        // Command nesnesi için tanımlanmış alan doğrulama işlemleri yapılır 
+        var result = await validator.ValidateAsync(command, cancellationToken);
+        // Hatalar toplanır
+        var errors = result.Errors.Select(e => e.ErrorMessage).ToList();
+        if (errors.Count != 0)
+        {
+            // Birden fazla hata varsa ilki Exception olarak fırlatılır
+            var firstError = errors.FirstOrDefault();
+            logger.LogError("Validation rules violation occured. Error is {ErrorMessage}", firstError);
+            throw new ValidationException(firstError);
+        }
+
+        logger.LogInformation("CreateGameCommandHandler.Handle invoked. {Command}", command);
+
         // Command nesnesinden gelen GameDto örneğini kullanarak bir Game nesnesi örneklenir
         var newGame = Game.Create(
             Guid.NewGuid(),
