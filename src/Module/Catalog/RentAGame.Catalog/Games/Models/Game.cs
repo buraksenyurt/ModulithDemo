@@ -46,12 +46,12 @@ public class Game
         Title = title;
         Description = description;
         Programmers = programmers;
-        ListPrice = listPrice;
         ThumbnailImage = thumbnailImage;
         Genres = genres;
 
         if (ListPrice != listPrice)
         {
+            ListPrice = listPrice;
             AddEvent(new GameListPriceChangedEvent(this));
         }
     }
