@@ -1,7 +1,7 @@
 namespace RentAGame.Shared.Domain;
 
 public interface IAggregate<T>
-    : IEntity<T>, IEntity
+    : IAggregate, IEntity<T>
 {
 
 }
