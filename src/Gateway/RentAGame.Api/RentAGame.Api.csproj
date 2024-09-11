@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Module\Catalog\RentAGame.Catalog\RentAGame.Catalog.csproj" />
-    <ProjectReference Include="..\..\Module\Chart\RentAGame.Chart\RentAGame.Chart.csproj" />
+    <ProjectReference Include="..\..\Module\ShoppingCart\RentAGame.ShoppingCart\RentAGame.ShoppingCart.csproj" />
     <ProjectReference Include="..\..\Module\Ordering\RentAGame.Ordering\RentAGame.Ordering.csproj" />    
   </ItemGroup>
 

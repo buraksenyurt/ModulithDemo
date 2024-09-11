@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shared\RentAGame.Shared\RentAGame.Shared.csproj" />
+    <Folder Include="Data\" />
+    <Folder Include="Games\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Games\**" />
-    <Folder Include="Data\**" />
+    <ProjectReference Include="..\..\..\Shared\RentAGame.Shared\RentAGame.Shared.csproj" />
   </ItemGroup>
 
 </Project>

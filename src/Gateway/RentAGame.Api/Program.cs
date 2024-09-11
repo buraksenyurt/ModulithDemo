@@ -3,13 +3,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCarterModulesFromAssemblies
 (
     typeof(CreateGameEndpoint).Assembly
-// Chart module assembly gelecek
+// ShoppingCart module assembly gelecek
 // Ordering module assembly gelecek
 );
 
 builder.Services
     .AddCatalogModule(builder.Configuration)
-    .AddChartModule(builder.Configuration)
+    .AddShoppingCartModule(builder.Configuration)
     .AddOrderingModule(builder.Configuration);
 
 var app = builder.Build();
@@ -19,7 +19,7 @@ app.MapCarter();
 
 app
     .UseCatalogModule()
-    .UseChartModule()
+    .UseShoppingCartModule()
     .UseOrderingModule();
 
 app.Run();
