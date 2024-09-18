@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RentAGame.Shared.Behaviors;
 
 namespace RentAGame.Catalog;
 
@@ -33,6 +34,8 @@ public static class DependencyInjection
         services.AddMediatR(configuration =>
         {
             configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            // Veri doğrulama işlemleri için tasarlanmış Behavior bileşeni kayıt ediliyor
+            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
 
         // Assembly üzerindeki Fluent Validator'lar DI servislerine kayıt edilir

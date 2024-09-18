@@ -54,22 +54,28 @@ public class CreateGameCommandValidator
     }
 }
 
-public class CreateGameHandler(CatalogDbContext catalogDbContext, IValidator<CreateGameCommand> validator, ILogger<CreateGameHandler> logger)
+public class CreateGameHandler(CatalogDbContext catalogDbContext, ILogger<CreateGameHandler> logger)
     : ICommandHandler<CreateGameCommand, CreateGameResult>
 {
     public async Task<CreateGameResult> Handle(CreateGameCommand command, CancellationToken cancellationToken)
     {
-        // Command nesnesi için tanımlanmış alan doğrulama işlemleri yapılır 
-        var result = await validator.ValidateAsync(command, cancellationToken);
-        // Hatalar toplanır
-        var errors = result.Errors.Select(e => e.ErrorMessage).ToList();
-        if (errors.Count != 0)
-        {
-            // Birden fazla hata varsa ilki Exception olarak fırlatılır
-            var firstError = errors.FirstOrDefault();
-            logger.LogError("Validation rules violation occured. Error is {ErrorMessage}", firstError);
-            throw new ValidationException(firstError);
-        }
+        /* 
+         * Doğrulama işlemleri ValidationBehavior içerisinde MediatR pipeline üzerinden ele alındığı için
+         * hem constructor'dan yapılan bileşen(component) bildirimi kaldırıldı hem de aşağıdaki doğrulama
+         * kodları yorum dışı bırakıldı.Benzer durum doğrulama kontrolü yapılan diğer Handler nesneleri için de geçerli.
+         */
+
+        //// Command nesnesi için tanımlanmış alan doğrulama işlemleri yapılır 
+        //var result = await validator.ValidateAsync(command, cancellationToken);
+        //// Hatalar toplanır
+        //var errors = result.Errors.Select(e => e.ErrorMessage).ToList();
+        //if (errors.Count != 0)
+        //{
+        //    // Birden fazla hata varsa ilki Exception olarak fırlatılır
+        //    var firstError = errors.FirstOrDefault();
+        //    logger.LogError("Validation rules violation occured. Error is {ErrorMessage}", firstError);
+        //    throw new ValidationException(firstError);
+        //}
 
         logger.LogInformation("CreateGameCommandHandler.Handle invoked. {Command}", command);
 
