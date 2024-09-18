@@ -17,12 +17,7 @@ public class GetGameByIdHandler(CatalogDbContext catalogDbContext)
             .AsNoTracking()
             // Aranan Entity verisi üzerinde değişiklik yapılmayacağı için FindAsync yerine
             // SingleOrDefaultAsync kullanımı tercih edilir.
-            .SingleOrDefaultAsync(g => g.Id == query.Id, cancellationToken);
-
-        if (game == null)
-        {
-            throw new Exception($"Request Game with {query.Id} not found");
-        }
+            .SingleOrDefaultAsync(g => g.Id == query.Id, cancellationToken) ?? throw new GameNotFoundException(query.Id);
 
         var gameDto = game.Adapt<GameDto>();
         return new GetGameByIdResult(gameDto);

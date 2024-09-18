@@ -12,6 +12,8 @@ builder.Services
     .AddShoppingCartModule(builder.Configuration)
     .AddOrderingModule(builder.Configuration);
 
+builder.Services.AddExceptionHandler<CentralExceptionHandler>();
+
 var app = builder.Build();
 
 // Carter paketini kullanarak route map işlemleri icra edilecek
@@ -21,5 +23,10 @@ app
     .UseCatalogModule()
     .UseShoppingCartModule()
     .UseOrderingModule();
+
+app.UseExceptionHandler(options =>
+{
+
+});
 
 app.Run();

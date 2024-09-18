@@ -1,5 +1,3 @@
-using RentAGame.Catalog.Games.Features.UpdateGame;
-
 namespace RentAGame.Catalog.Games.Features.DeleteGame;
 
 public record DeleteGameCommand(Guid GameId) : ICommand<DeleteGameResult>;
@@ -20,7 +18,7 @@ public class DeleteGameHandler(CatalogDbContext catalogDbContext)
 {
     public async Task<DeleteGameResult> Handle(DeleteGameCommand command, CancellationToken cancellationToken)
     {
-        var game = await catalogDbContext.Games.FindAsync([command.GameId], cancellationToken) ?? throw new Exception($"Game object not found. Id {command.GameId}");
+        var game = await catalogDbContext.Games.FindAsync([command.GameId], cancellationToken) ?? throw new GameNotFoundException(command.GameId);
 
         catalogDbContext.Games.Remove(game);
         await catalogDbContext.SaveChangesAsync(cancellationToken);

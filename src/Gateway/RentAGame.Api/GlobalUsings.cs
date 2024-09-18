@@ -4,3 +4,4 @@ global using RentAGame.Ordering;
 global using Carter;
 global using RentAGame.Catalog.Games.Features.CreateGame;
 global using RentAGame.Shared.Extensions;
+global using RentAGame.Shared.Exceptions;

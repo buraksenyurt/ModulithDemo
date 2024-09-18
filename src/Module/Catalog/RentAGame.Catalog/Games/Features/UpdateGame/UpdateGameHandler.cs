@@ -1,5 +1,3 @@
-using RentAGame.Catalog.Games.Features.CreateGame;
-
 namespace RentAGame.Catalog.Games.Features.UpdateGame;
 
 public record UpdateGameCommand(GameDto Game) : ICommand<UpdateGameResult>;
@@ -49,7 +47,7 @@ public class UpdateGameHandler(CatalogDbContext catalogDbContext)
 {
     public async Task<UpdateGameResult> Handle(UpdateGameCommand command, CancellationToken cancellationToken)
     {
-        var game = await catalogDbContext.Games.FindAsync([command.Game.Id], cancellationToken) ?? throw new Exception($"Game object not found. Id {command.Game.Id}");
+        var game = await catalogDbContext.Games.FindAsync([command.Game.Id], cancellationToken) ?? throw new GameNotFoundException(command.Game.Id);
 
         game.Update(
             command.Game.Title,
