@@ -12,38 +12,34 @@ public class CentralExceptionHandler(ILogger<CentralExceptionHandler> logger)
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
         logger.LogError("Error : {exceptionMessage} : {time}", exception.Message, DateTime.UtcNow);
-        var title = string.Empty;
-        string detail = string.Empty;
-        int statusCode = StatusCodes.Status500InternalServerError;
+
+        var problemDetails = new ProblemDetails
+        {
+            Title = string.Empty,
+            Detail = string.Empty,
+            Status = StatusCodes.Status500InternalServerError,
+            Instance = httpContext.Request.Path
+        };
 
         switch (exception)
         {
             case ValidationException:
             case BadRequestException:
-                title = exception.GetType().Name;
-                detail = exception.Message;
-                statusCode = StatusCodes.Status400BadRequest;
+                problemDetails.Title = exception.GetType().Name;
+                problemDetails.Detail = exception.Message;
+                problemDetails.Status = StatusCodes.Status400BadRequest;
                 break;
             case NotFoundException:
-                title = exception.GetType().Name;
-                detail = exception.Message;
-                statusCode = StatusCodes.Status404NotFound;
+                problemDetails.Title = exception.GetType().Name;
+                problemDetails.Detail = exception.Message;
+                problemDetails.Status = StatusCodes.Status404NotFound;
                 break;
             default:
-                title = exception.GetType().Name;
-                detail = exception.Message;
-                statusCode = StatusCodes.Status500InternalServerError;
                 break;
         }
-        httpContext.Response.StatusCode = statusCode;
 
-        var problemDetails = new ProblemDetails
-        {
-            Title = string.Empty,
-            Detail = detail,
-            Status = statusCode,
-            Instance = httpContext.Request.Path
-        };
+        httpContext.Response.StatusCode = problemDetails.Status.Value;
+
         problemDetails.Extensions.Add("traceId", httpContext.TraceIdentifier);
 
         if (exception is ValidationException validationException)
