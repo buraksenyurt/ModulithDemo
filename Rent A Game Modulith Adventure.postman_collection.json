@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"game\": {\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"raw": "{\n    \"game\": {\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"UklGRnL9AABXRUJQVlA4IFhKAABw3AGdASoABAAEPjEYikQiIaEloLHYYLAGCWlu3Mhnbvp6/+fwY+cOoxyn/7eWueAf8zom+TbF\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -42,7 +42,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"game\": {\n        \"title\": \"\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"raw": "{\n    \"game\": {\n        \"title\": \"\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"UklGRnL9AABXRUJQVlA4IFhKAABw3AGdASoABAAEPjEYikQiIaEloLHYYLAGCWlu3Mhnbvp6/+fwY+cOoxyn/7eWueAf8zom+TbF\",\n        \"listPrice\": 29.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -68,7 +68,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"game\": {\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 29.99,\n        \"genres\": []\n    }\n}",
+							"raw": "{\n    \"game\": {\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"UklGRnL9AABXRUJQVlA4IFhKAABw3AGdASoABAAEPjEYikQiIaEloLHYYLAGCWlu3Mhnbvp6/+fwY+cOoxyn/7eWueAf8zom+TbF\",\n        \"listPrice\": 29.99,\n        \"genres\": []\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -94,7 +94,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"game\": {\n        \"id\": \"07ac7784-44ba-4198-8787-9467a2e4d035\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün en meşhur ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"\",\n        \"listPrice\": 33.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
+							"raw": "{\n    \"game\": {\n        \"id\": \"07ac7784-44ba-4198-8787-9467a2e4d035\",\n        \"title\": \"Starcraft\",\n        \"description\": \"RTS türünün en meşhur ikonik uzay savaşı\",\n        \"programmers\": [\n            \"Chris Metzen\",\n            \"James Phinney\"\n        ],\n        \"thumbnailImage\": \"UklGRnL9AABXRUJQVlA4IFhKAABw3AGdASoABAAEPjEYikQiIaEloLHYYLAGCWlu3Mhnbvp6/+fwY+cOoxyn/7eWueAf8zom+TbFs\",\n        \"listPrice\": 33.99,\n        \"genres\": [\n            3\n        ]\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
